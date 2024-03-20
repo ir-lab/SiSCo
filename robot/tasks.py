@@ -3,11 +3,17 @@ import sys
 import numpy as np
    
 class Tasks(object):
+    """
+        Initializes the Tasks class which encapsulates various task related parameters and definitions.
+
+        Attributes:
+            workspace (list): A list defining the size of the workspace [width, height].
+            objects (list): A list of string names for different types of objects involved in tasks.
+            structures_dict (dict): A dictionary mapping task names to parameters and task-specific information.
+            waypoints (dict): A dictionary mapping task ID to waypoints sets along with associated object type and color.
+    """
     def __init__(self) -> None:
         super(Tasks,self).__init__()
-        self.workspace = [1000,500]
-        
-        
         waypoints_set_A = self.generate_traj(start_xyz=[-0.5, 0.2, -0.045], end_xyz= [ 0.00, 0.4, -0.03], end_rpy=[-np.pi/2.0,np.pi/2.0,-np.pi/2.0])
         waypoints_set_B = self.generate_traj(start_xyz=[-0.5, 0.4, -0.045], end_xyz= [-0.15, 0.4, -0.03], end_rpy=[-np.pi/2.0,np.pi/2.0,-np.pi/2.0])
         waypoints_set_C = self.generate_traj(start_xyz=[-0.5, 0.6, -0.045], end_xyz= [ 0.15, 0.4, -0.03], end_rpy=[-np.pi/2.0,np.pi/2.0,-np.pi/2.0])

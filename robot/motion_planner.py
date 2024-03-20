@@ -22,6 +22,15 @@ HOME_JOINTS_RAD_2 = np.array([2.0167129039764404, -2.4554107824908655, 2.3721654
 
 
 class Motion_Planner(Robot_KD_Solver,Tasks):
+    """
+    Inherits from Robot_KD_Solver and Tasks to provide motion planning functionalities.
+
+    This class handles the motion planning of a robot by utilizing the kinematic solvers
+    from the Robot_KD_Solver and task-based functionalities from the Tasks class.
+
+    It is designed to interact with ROS (Robot Operating System) for controlling a robot
+    by publishing and subscribing to relevant topics."""
+    
     def __init__(self) -> None:
         super(Motion_Planner,self).__init__()      
         rospy.init_node("motion_planner")
