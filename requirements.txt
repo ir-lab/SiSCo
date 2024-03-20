@@ -1,0 +1,15 @@
+em
+catkin_pkg
+psutil
+opencv-python
+pyyaml
+rospkg
+requests
+tqdm
+transforms3d
+openai
+vertexai
+cairosvg
+text2svg
+pynput
+PySimpleGUI==4.60.5
