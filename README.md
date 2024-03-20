@@ -40,7 +40,10 @@ Once you have your openai api key, setup an environment variable in your bashrc 
 
 ##
 ### Runnning SiSCo to generate Visual Signals via Intention Projection (VSIntPro)
+Instructions incoming....
 
 ##
 ### Runnning SiSCo to generate Visual Signals on Monitor (VSM)
+Instructions incoming....
+
 
