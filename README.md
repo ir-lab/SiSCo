@@ -1,6 +1,4 @@
 # SiSCo
-=======
-# SiSCo
 This repository consist implementation of IROS 2024 submission \" **SiSCo**: **Si**gnal **S**ynthesis for Effective Human-Robot **Co**mmunication via Large Language Models\"
 
 
