@@ -40,7 +40,8 @@ Once you have your openai api key, setup an environment variable in your bashrc 
 
 ##
 ### Visualize SiSCo outputs
-In this paper, A projector-camera based mixed-reality setup was used. However, you can directly visualize **SiSCo** output on monitor by providing your custom inputs values to properties that are used by Object Visual Signal Synthesizer (**ObjectVSS**) and Instruction Visual Signal Synthesizer (**InstVSS**):
+
+In this paper, a projector-camera-based mixed-reality setup was used. However, you can directly visualize **SiSCo** output on a monitor by providing your custom input values to properties used by the Object Visual Signal Synthesizer (**ObjectVSS**) and Instruction Visual Signal Synthesizer (**InstVSS**):
 
 * Object Description ( &Delta; ): "Rocket"
 * Object Color ( &Theta; ): "Red"
