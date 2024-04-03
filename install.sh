@@ -20,12 +20,19 @@ install_repo() {
   else
     echo "Cloning $repo_name ..."
     git clone $repo_url
+    if [ -z "${brach}" ]; then
+      echo "using default branch"
+    else
+      echo "checking out branch: $branch"
+      git checkout $branch
+    fi
   fi
 
   echo "Building and installing $repo_name ..."
-  cd $repo_name && git checkout $branch
+  cd $repo_name 
 
   if [ $repo_name == "orocos_kinematics_dynamics" ]; then
+    git checkout 1ae45bb2e0821586e74047b01f7cb48d913204f4
     read -p $'\nEnter \"y\" if you are inside python virtual environment else press \"enter\" to stop installation\n' user_input
     if [[ $user_input != "y" ]]; then
         echo -e "Please source the python virtual environment"
@@ -34,12 +41,12 @@ install_repo() {
 
     git submodule update --init
     echo "install kdl lib"
-    mkdir orocos_kdl/build && cd orocos_kdl/build && cmake ..
+    mkdir orocos_kdl/build && cd orocos_kdl/build && cmake  -DPYTHON_EXECUTABLE=/usr/bin/python3 ..
     make -j$(nproc)
     sudo make install
     cd  ../..
     echo "installing pykdl lib"
-    mkdir python_orocos_kdl/build && cd python_orocos_kdl/build && cmake ..
+    mkdir python_orocos_kdl/build && cd python_orocos_kdl/build && cmake -DPYTHON_EXECUTABLE=/usr/bin/python3 ..
     make -j$(nproc)
     sudo make install
     cd  ../..
@@ -69,5 +76,5 @@ install_repo() {
 }
 
 echo "Installing PyKDL"
-install_repo https://github.com/orocos/orocos_kinematics_dynamics.git pykdl_tree
+install_repo https://github.com/orocos/orocos_kinematics_dynamics.git 
  
