@@ -1,0 +1,13 @@
+
+# cache dirs
+.cache/*
+__pycache__/*
+context/__pycache__/*
+robot/__pycache__/*
+mixed_reality/__pycache__/*
+
+.images/*
+
+# tmp files
+.username.txt
+SiSCo.code-workspace
