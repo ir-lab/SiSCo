@@ -109,7 +109,7 @@ def get_python_f(response, re_pattern=r'\`\`\`python.*?\`\`\`'):
     return re.findall(re_pattern, response, re.DOTALL)[0].replace("python", "").replace("```", "")
 
 
-def svg_to_cv(svg_code, filename="output.png", h=500, w=500, show=True):
+def svg_to_cv(svg_code, filename=".output.png", h=500, w=500, show=True):
     try:
         # print(svg_code)
         svg2png(bytestring=svg_code, write_to=filename)
