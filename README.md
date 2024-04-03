@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # SiSCo
 =======
 # SiSCo
@@ -86,4 +85,3 @@ $ python human_robot_teaming_exp.py --debug 1 --debug_mode [2 or 3]
 * <a name="ref_1"></a> [Projecting Robot Intentions Through Visual Cues: Static vs. Dynamic Signaling](https://arxiv.org/abs/2308.09871)
 * <a name="ref_2"></a> [Projecting robot intentions into human environments](https://ieeexplore.ieee.org/abstract/document/7745145)
 * <a name="ref_3"></a> [Better Teaming Through Visual Cues: How Projecting Imagery in a Workspace Can Improve Human-Robot Collaboration](https://ieeexplore.ieee.org/abstract/document/8359206) -->
->>>>>>> dev
